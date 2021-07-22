@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaDiscordExtension", "DotaDiscordExtension\DotaDiscordExtension.csproj", "{759BBB5E-C0E4-4563-8645-859F7890E4DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaDiscordExtension.UI", "DotaDiscordExtension\DotaDiscordExtension.UI.csproj", "{759BBB5E-C0E4-4563-8645-859F7890E4DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaDiscordExtension.Core", "DotaDiscordExtension.Core\DotaDiscordExtension.Core.csproj", "{4022EBF8-B213-478D-B72E-DF9B87829491}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaDiscordExtension.Tests", "DotaDiscordExtension.Tests\DotaDiscordExtension.Tests.csproj", "{EE7C1BBC-4CD2-41D2-9529-EDB9596869B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{759BBB5E-C0E4-4563-8645-859F7890E4DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{759BBB5E-C0E4-4563-8645-859F7890E4DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{759BBB5E-C0E4-4563-8645-859F7890E4DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4022EBF8-B213-478D-B72E-DF9B87829491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4022EBF8-B213-478D-B72E-DF9B87829491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4022EBF8-B213-478D-B72E-DF9B87829491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4022EBF8-B213-478D-B72E-DF9B87829491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE7C1BBC-4CD2-41D2-9529-EDB9596869B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE7C1BBC-4CD2-41D2-9529-EDB9596869B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE7C1BBC-4CD2-41D2-9529-EDB9596869B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE7C1BBC-4CD2-41D2-9529-EDB9596869B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,13 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\Commands\Base\" />
     <Folder Include="Models\" />
     <Folder Include="Resources\Img\" />
-    <Folder Include="Resources\Brushes\" />
     <Folder Include="Services\" />
     <Folder Include="ViewModels\Base\" />
     <Folder Include="Views\Pages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HandyControl" Version="3.2.0" />
+    <PackageReference Include="HandyControls" Version="3.3.7" />
   </ItemGroup>
 
 </Project>

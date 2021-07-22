@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace DotaDiscordExtension
+namespace DotaDiscordExtension.UI
 {
     public partial class App : Application
     {

@@ -1,11 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Resources\" />
+    <PackageReference Include="Dota2GSI" Version="1.0.4" />
+    <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
+    <PackageReference Include="Owin.Security.Providers.Discord" Version="2.26.0" />
   </ItemGroup>
 
 </Project>

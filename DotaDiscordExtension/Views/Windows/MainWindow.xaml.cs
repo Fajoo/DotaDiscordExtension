@@ -1,6 +1,4 @@
-﻿using System.Windows;
-
-namespace DotaDiscordExtension
+﻿namespace DotaDiscordExtension
 {
     public partial class MainWindow
     {

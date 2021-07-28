@@ -3,11 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaDiscordExtension.UI", "DotaDiscordExtension\DotaDiscordExtension.UI.csproj", "{759BBB5E-C0E4-4563-8645-859F7890E4DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaDiscordExtension.UI", "DotaDiscordExtension\DotaDiscordExtension.UI.csproj", "{759BBB5E-C0E4-4563-8645-859F7890E4DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaDiscordExtension.Core", "DotaDiscordExtension.Core\DotaDiscordExtension.Core.csproj", "{4022EBF8-B213-478D-B72E-DF9B87829491}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaDiscordExtension.Core", "DotaDiscordExtension.Core\DotaDiscordExtension.Core.csproj", "{4022EBF8-B213-478D-B72E-DF9B87829491}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaDiscordExtension.Tests", "DotaDiscordExtension.Tests\DotaDiscordExtension.Tests.csproj", "{EE7C1BBC-4CD2-41D2-9529-EDB9596869B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaDiscordExtension.Tests", "DotaDiscordExtension.Tests\DotaDiscordExtension.Tests.csproj", "{EE7C1BBC-4CD2-41D2-9529-EDB9596869B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{90D420AE-62FA-41FD-AE38-E5EC1EBC21B7}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

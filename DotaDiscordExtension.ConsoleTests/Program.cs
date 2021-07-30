@@ -7,7 +7,7 @@ namespace DotaDiscordExtension.ConsoleTests
     {
         static void Main(string[] args)
         {
-            var test = new Dota2Provider();
+            var test = new DiscordProvider();
 
             test.Start();
 

@@ -2,12 +2,8 @@
 
 namespace DotaDiscordExtension.Core.Interfaces
 {
-    public interface IDota2Provider : IDisposable
+    public interface IDota2Provider : IProvider
     {
         public event StateGame StateGame;
-
-        public bool Start();
-
-        public void Stop();
     }
 }

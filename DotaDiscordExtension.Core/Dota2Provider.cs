@@ -19,6 +19,7 @@ namespace DotaDiscordExtension.Core
 
         public Dota2Provider()
         {
+            _model = new DotaModel();
             _listener = new GameStateListener(4000);
         }
 
@@ -27,8 +28,6 @@ namespace DotaDiscordExtension.Core
             if (_listener.Running) return true;
 
             _listener.NewGameState += ListenerOnNewGameState;
-
-            _model = new DotaModel();
 
             return _listener.Start();
         }

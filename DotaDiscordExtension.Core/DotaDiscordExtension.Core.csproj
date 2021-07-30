@@ -10,7 +10,7 @@
     <PackageReference Include="Dota2GSI" Version="1.0.4" />
     <PackageReference Include="Gameloop.Vdf" Version="0.6.1" />
     <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
-    <PackageReference Include="Owin.Security.Providers.Discord" Version="2.26.0" />
+    <PackageReference Include="DiscordRichPresence" Version="1.0.175" />
   </ItemGroup>
 
 </Project>

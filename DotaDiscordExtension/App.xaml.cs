@@ -9,6 +9,8 @@ namespace DotaDiscordExtension.UI
 {
     public partial class App : Application
     {
+        public static Window ActivedWindow => Current.Windows.Cast<Window>().FirstOrDefault(w => w.IsActive);
+
         protected override void OnStartup(StartupEventArgs e)
         {
             if (CheckProcess()) Current.Shutdown();
@@ -17,6 +19,8 @@ namespace DotaDiscordExtension.UI
             else
             {
                 // ToDo 
+                var mainWindow = new MainWindow();
+                mainWindow.Show();
             }
         }
 

@@ -35,18 +35,10 @@ namespace DotaDiscordExtension.Core
 
             if (timeNow - _time < 3) return;
 
-            Console.WriteLine(model.GameState);
-
-            _discordClient.SetPresence(new RichPresence
-            {
-                Details = model.KDA.ToString(),
-                State = model.Team,
-                Assets = new Assets
-                {
-                    LargeImageKey = "draft",
-                    LargeImageText = $"{model.Hero} (Lvl: {model.Lvl})"
-                }
-            });
+            if (model is not null)
+                _discordClient.SetPresence(PresenceConfigure.GetPresence(model));
+            else
+                _discordClient.ClearPresence();
 
             _time = timeNow;
         }

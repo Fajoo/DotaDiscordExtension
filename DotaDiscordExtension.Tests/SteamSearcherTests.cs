@@ -37,7 +37,7 @@ namespace DotaDiscordExtension.Tests
         [Fact]
         public async void GetPathToDota_ValuesCoincide_ReturnTrue()
         {
-            var expected = "D:\\steam\\steamapps\\common\\dota 2 beta";
+            var expected = "C:\\SteamLibrary\\steamapps\\common\\dota 2 beta";
 
             var actual = await _steam.GetPathToDota();
 

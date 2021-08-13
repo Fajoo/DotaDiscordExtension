@@ -1,11 +1,11 @@
 ﻿using System;
+using System.Timers;
 using System.Threading;
 using System.Threading.Tasks;
 using Dota2GSI;
 using Dota2GSI.Nodes;
 using DotaDiscordExtension.Core.Interfaces;
 using DotaDiscordExtension.Core.Models;
-using DotaDiscordExtension.Core.Resources;
 
 namespace DotaDiscordExtension.Core
 {
@@ -45,7 +45,7 @@ namespace DotaDiscordExtension.Core
                 }
 
                 _model.KDA = (gameState.Player.Kills.ToString(), gameState.Player.Deaths.ToString(), gameState.Player.Assists.ToString());
-                _model.Hero = Dota2Names.GetHeroName(gameState.Hero.Name);
+                _model.Hero = gameState.Hero.Name;
                 _model.Team = gameState.Player.Team.ToString();
                 _model.Lvl = gameState.Hero.Level.ToString();
                 _model.GameState = "In game";

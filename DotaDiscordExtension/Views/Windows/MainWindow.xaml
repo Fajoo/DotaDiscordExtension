@@ -5,9 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DotaDiscordExtension"
         xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:viewModels="clr-namespace:DotaDiscordExtension.UI.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-
+    <hc:Window.DataContext>
+        <viewModels:MainViewModel/>
+    </hc:Window.DataContext>
+    <hc:Interaction.Triggers>
+        <hc:EventTrigger EventName="Closing">
+            <hc:EventToCommand Command="{Binding CloseCommand}" PassEventArgsToCommand="True"/>
+        </hc:EventTrigger>
+    </hc:Interaction.Triggers>
     <Grid>
+        <hc:NotifyIcon Text="DiscordDotaRPC"
+                       Icon="../../Resources/Img/dota2.ico">
+            <hc:Interaction.Triggers>
+                <hc:EventTrigger EventName="MouseDoubleClick">
+                    <hc:EventToCommand Command="hc:ControlCommands.PushMainWindow2Top"/>
+                </hc:EventTrigger>
+            </hc:Interaction.Triggers>
+            <hc:NotifyIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Command="hc:ControlCommands.PushMainWindow2Top" Header="Open"/>
+                    <MenuItem Command="hc:ControlCommands.ShutdownApp" Header="Exit"/>
+                </ContextMenu>
+            </hc:NotifyIcon.ContextMenu>
+        </hc:NotifyIcon>
     </Grid>
 </hc:Window>

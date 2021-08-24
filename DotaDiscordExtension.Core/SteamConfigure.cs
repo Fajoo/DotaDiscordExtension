@@ -33,19 +33,16 @@ namespace DotaDiscordExtension.Core
             _steamSearcher = new SteamSearcher();
         }
 
-        public async Task<WriteResult> CreateFileAsync()
+        public async Task<WriteResult> CreateFileAsync(string path)
         {
-            var gamePath = await _steamSearcher.GetPathToDota();
+            if (string.IsNullOrEmpty(path)) return WriteResult.Error;
 
-            if (gamePath is null) return WriteResult.Error;
-            if (gamePath.Equals(string.Empty)) return WriteResult.NotFound;
-
-            var path = $"{gamePath}\\game\\dota\\cfg\\gamestate_integration\\";
-            var fullPath = $"{path}\\gamestate_integration_discordintegration.cfg";
+            var directory = $"{path}\\game\\dota\\cfg\\gamestate_integration\\";
+            var fullPath = $"{directory}\\gamestate_integration_discordintegration.cfg";
 
             if (File.Exists(fullPath)) return WriteResult.OK;
 
-            Directory.CreateDirectory(path);
+            Directory.CreateDirectory(directory);
 
             File.WriteAllText(fullPath, templateFile);
 

@@ -7,13 +7,17 @@
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:viewModels="clr-namespace:DotaDiscordExtension.UI.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        ResizeMode="CanMinimize"
+        Height="600" Width="400">
     <hc:Window.DataContext>
         <viewModels:MainViewModel/>
     </hc:Window.DataContext>
     <hc:Interaction.Triggers>
         <hc:EventTrigger EventName="Closing">
             <hc:EventToCommand Command="{Binding CloseCommand}" PassEventArgsToCommand="True"/>
+        </hc:EventTrigger>
+        <hc:EventTrigger EventName="Loaded">
+            <hc:EventToCommand Command="{Binding InitCommand}" PassEventArgsToCommand="True"/>
         </hc:EventTrigger>
     </hc:Interaction.Triggers>
     <Grid>
@@ -31,5 +35,21 @@
                 </ContextMenu>
             </hc:NotifyIcon.ContextMenu>
         </hc:NotifyIcon>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="2"
+                        Orientation="Vertical">
+                <hc:Divider Margin="5,0"/>
+                <TextBlock Text="Version 0.0.1"
+                           Margin="5"
+                           Foreground="{StaticResource GrayBrush}"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Right"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </hc:Window>

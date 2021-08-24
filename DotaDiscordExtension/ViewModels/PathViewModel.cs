@@ -51,15 +51,14 @@ namespace DotaDiscordExtension.UI.ViewModels
 
             if (dialog.ShowDialog() != DialogResult.OK) return;
 
-            var newPath = dialog.SelectedPath;
-            UserSettings.Default.PathToDota = newPath;
-            Path = newPath;
+            Path = dialog.SelectedPath;
         });
 
         private ICommand _closeWindowCommand;
         public ICommand CloseWindowCommand => _closeWindowCommand ?? new LambdaCommand(e =>
         {
             var mainWindow = new MainWindow();
+            UserSettings.Default.PathToDota = Path;
             UserSettings.Default.Save();
             App.ActivedWindow.Close();
             mainWindow.Show();

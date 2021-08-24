@@ -9,16 +9,19 @@ namespace DotaDiscordExtension.Core
     public class DiscordProvider : IDiscordProvider
     {
         private readonly Dota2Provider _dota2Provider;
-        private DiscordRpcClient _discordClient;
+        private readonly DiscordRpcClient _discordClient;
 
         private long _time = 0;
 
-        public DiscordProvider() => _dota2Provider = new Dota2Provider();
+        public DiscordProvider()
+        {
+            _dota2Provider = new Dota2Provider();
+
+            _discordClient = new DiscordRpcClient("700756138488103013");
+        }
 
         public bool Start()
         {
-            _discordClient = new DiscordRpcClient("700756138488103013");
-
             if(!_discordClient.IsInitialized)
                 _discordClient.Initialize();
 
@@ -47,7 +50,7 @@ namespace DotaDiscordExtension.Core
 
         public void Dispose()
         {
-            _discordClient.Deinitialize();
+            _discordClient.ClearPresence();
             _dota2Provider.Stop();
         }
     }

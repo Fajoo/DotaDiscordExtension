@@ -21,16 +21,10 @@ namespace DotaDiscordExtension.Core
         {
             _model = new DotaModel();
             _listener = new GameStateListener(4000);
-        }
-
-        public bool Start()
-        {
-            if (_listener.Running) return true;
-
             _listener.NewGameState += ListenerOnNewGameState;
-
-            return _listener.Start();
         }
+
+        public bool Start() => _listener.Running || _listener.Start();
 
         private void ListenerOnNewGameState(GameState gameState)
         {

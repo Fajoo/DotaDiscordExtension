@@ -52,7 +52,7 @@ namespace DotaDiscordExtension.Core.Resources
             ["npc_dota_hero_wisp"] = "Io",
             ["npc_dota_hero_jakiro"] = "Jakiro",
             ["npc_dota_hero_juggernaut"] = "Juggernaut",
-            ["npc_dota_hero_keeper_of_the_light"] = "Keeper of the Light",
+            ["npc_dota_hero_kotl"] = "Keeper of the Light",
             ["npc_dota_hero_kunkka"] = "Kunkka",
             ["npc_dota_hero_legion_commander"] = "Legion Commander",
             ["npc_dota_hero_leshrac"] = "Leshrac",

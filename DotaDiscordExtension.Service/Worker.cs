@@ -6,7 +6,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using DotaDiscordExtension.Core.Interfaces;
-using DotaDiscordExtension.Service.Services;
 
 namespace DotaDiscordExtension.Service
 {

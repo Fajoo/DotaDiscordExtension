@@ -1,7 +1,6 @@
 using DotaDiscordExtension.Core;
 using DotaDiscordExtension.Core.Interfaces;
 using Microsoft.Extensions.Hosting;
-using DotaDiscordExtension.Service.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DotaDiscordExtension.Service

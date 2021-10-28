@@ -26,9 +26,11 @@ namespace DotaDiscordExtension.Core
             }
             else
             {
+                var heroName = Dota2Names.GetHeroName(model.Hero);
+
                 _presence.Details = $"K/D/A : {model.KDA.Item1}/{model.KDA.Item2}/{model.KDA.Item3}";
                 _assets.LargeImageKey = model.Hero;
-                _assets.LargeImageText = model.Lvl.Equals("-1") ? $"{Dota2Names.GetHeroName(model.Hero)}" : $"{Dota2Names.GetHeroName(model.Hero)} (Lvl: {model.Lvl})";
+                _assets.LargeImageText = model.Lvl.Equals("-1") ? $"{heroName}" : $"{heroName} (Lvl: {model.Lvl})";
             }
 
             _assets.SmallImageKey = model.Team.ToLower();

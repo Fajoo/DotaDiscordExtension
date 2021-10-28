@@ -8,7 +8,7 @@
         xmlns:viewModels="clr-namespace:DotaDiscordExtension.UI.ViewModels"
         mc:Ignorable="d"
         ResizeMode="CanMinimize"
-        Height="600" Width="400">
+        Height="403" Width="683">
     <hc:Window.DataContext>
         <viewModels:MainViewModel/>
     </hc:Window.DataContext>

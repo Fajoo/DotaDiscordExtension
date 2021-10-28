@@ -1,4 +1,5 @@
-﻿using Dota2GSI;
+﻿using System;
+using Dota2GSI;
 using Dota2GSI.Nodes;
 using DotaDiscordExtension.Core.Interfaces;
 using DotaDiscordExtension.Core.Models;
@@ -35,7 +36,7 @@ namespace DotaDiscordExtension.Core
                 }
 
                 _model.KDA = (gameState.Player.Kills.ToString(), gameState.Player.Deaths.ToString(), gameState.Player.Assists.ToString());
-                _model.Hero = gameState.Hero.Name;
+                _model.Hero = string.Equals(gameState.Hero.Name, "npc_dota_hero_keeper_of_the_light") ? "npc_dota_hero_kotl" : gameState.Hero.Name;
                 _model.Team = gameState.Player.Team.ToString();
                 _model.Lvl = gameState.Hero.Level.ToString();
                 _model.GameState = "In game";

@@ -22,6 +22,15 @@ namespace DotaDiscordExtension.UI
                 var mainWindow = new MainWindow();
                 mainWindow.Show();
             }
+
+            var procStartInfo = new ProcessStartInfo()
+            {
+                WindowStyle = ProcessWindowStyle.Normal,
+                FileName = "cmd.exe",
+                Arguments = "sc.exe start "
+            };
+
+            Process.Start(procStartInfo);
         }
 
         private bool CheckProcess()

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Timers;
-using System.Threading;
-using System.Threading.Tasks;
-using Dota2GSI;
+﻿using Dota2GSI;
 using Dota2GSI.Nodes;
 using DotaDiscordExtension.Core.Interfaces;
 using DotaDiscordExtension.Core.Models;

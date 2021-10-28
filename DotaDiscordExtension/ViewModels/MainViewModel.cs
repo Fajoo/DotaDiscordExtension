@@ -6,13 +6,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using DiscordRPC;
 using DotaDiscordExtension.Core;
 using DotaDiscordExtension.Core.Models;
 using DotaDiscordExtension.UI.Infrastructure.Commands;
 using DotaDiscordExtension.UI.Resources;
 using DotaDiscordExtension.UI.ViewModels.Base;
-using HandyControl.Controls;
 using MessageBox = HandyControl.Controls.MessageBox;
 
 namespace DotaDiscordExtension.UI.ViewModels

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using DiscordRPC;
 using DotaDiscordExtension.Core.Interfaces;
 using DotaDiscordExtension.Core.Models;

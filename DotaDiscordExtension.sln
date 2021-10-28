@@ -14,7 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaDiscordExtension.ConsoleTests", "DotaDiscordExtension.ConsoleTests\DotaDiscordExtension.ConsoleTests.csproj", "{932AE8C7-603E-4790-971E-402D4DD13E57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaDiscordExtension.ConsoleTests", "DotaDiscordExtension.ConsoleTests\DotaDiscordExtension.ConsoleTests.csproj", "{932AE8C7-603E-4790-971E-402D4DD13E57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaDiscordExtension.Service", "DotaDiscordExtension.Service\DotaDiscordExtension.Service.csproj", "{6AC11F14-D2B9-4892-8514-06DD7F0DE7F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{932AE8C7-603E-4790-971E-402D4DD13E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{932AE8C7-603E-4790-971E-402D4DD13E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{932AE8C7-603E-4790-971E-402D4DD13E57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AC11F14-D2B9-4892-8514-06DD7F0DE7F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AC11F14-D2B9-4892-8514-06DD7F0DE7F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AC11F14-D2B9-4892-8514-06DD7F0DE7F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AC11F14-D2B9-4892-8514-06DD7F0DE7F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

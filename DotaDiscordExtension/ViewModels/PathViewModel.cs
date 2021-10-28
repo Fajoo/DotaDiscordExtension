@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
 using DotaDiscordExtension.Core;
 using DotaDiscordExtension.UI.Infrastructure.Commands;

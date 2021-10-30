@@ -32,8 +32,10 @@ namespace DotaDiscordExtension.Core
             _steamSearcher = new SteamSearcher();
         }
 
-        public async Task<WriteResult> CreateFileAsync(string path)
+        public async Task<WriteResult> CreateFileAsync()
         {
+            var path = await _steamSearcher.GetPathToDota();
+
             if (string.IsNullOrEmpty(path)) return WriteResult.Error;
 
             var directory = $"{path}\\game\\dota\\cfg\\gamestate_integration\\";
@@ -46,7 +48,6 @@ namespace DotaDiscordExtension.Core
             File.WriteAllText(fullPath, templateFile);
 
             return WriteResult.OK;
-
         }
     }
 }

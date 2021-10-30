@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaDiscordExtension.UI", "DotaDiscordExtension\DotaDiscordExtension.UI.csproj", "{759BBB5E-C0E4-4563-8645-859F7890E4DD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaDiscordExtension.Core", "DotaDiscordExtension.Core\DotaDiscordExtension.Core.csproj", "{4022EBF8-B213-478D-B72E-DF9B87829491}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaDiscordExtension.Tests", "DotaDiscordExtension.Tests\DotaDiscordExtension.Tests.csproj", "{EE7C1BBC-4CD2-41D2-9529-EDB9596869B6}"
@@ -16,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaDiscordExtension.ConsoleTests", "DotaDiscordExtension.ConsoleTests\DotaDiscordExtension.ConsoleTests.csproj", "{932AE8C7-603E-4790-971E-402D4DD13E57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotaDiscordExtension.Service", "DotaDiscordExtension.Service\DotaDiscordExtension.Service.csproj", "{6AC11F14-D2B9-4892-8514-06DD7F0DE7F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotaDiscordExtension.Service", "DotaDiscordExtension.Service\DotaDiscordExtension.Service.csproj", "{6AC11F14-D2B9-4892-8514-06DD7F0DE7F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,10 +22,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{759BBB5E-C0E4-4563-8645-859F7890E4DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{759BBB5E-C0E4-4563-8645-859F7890E4DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{759BBB5E-C0E4-4563-8645-859F7890E4DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{759BBB5E-C0E4-4563-8645-859F7890E4DD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4022EBF8-B213-478D-B72E-DF9B87829491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4022EBF8-B213-478D-B72E-DF9B87829491}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4022EBF8-B213-478D-B72E-DF9B87829491}.Release|Any CPU.ActiveCfg = Release|Any CPU

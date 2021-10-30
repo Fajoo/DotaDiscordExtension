@@ -29,7 +29,7 @@ namespace DotaDiscordExtension.Core
             {
                 var state = gameState.Map.GameState;
 
-                if (state == DOTA_GameState.Undefined)
+                if (state == DOTA_GameState.Undefined || gameState.Player.Activity != PlayerActivity.Playing)
                 {
                     StateGame?.Invoke(this, null);
                     return;

@@ -65,6 +65,7 @@ namespace DotaDiscordExtension.Core.Resources
             ["npc_dota_hero_lycan"] = "Lycan",
             ["npc_dota_hero_magnataur"] = "Magnus",
             ["npc_dota_hero_mars"] = "Mars",
+            ["npc_dota_hero_marci"] = "Marci",
             ["npc_dota_hero_medusa"] = "Medusa",
             ["npc_dota_hero_meepo"] = "Meepo",
             ["npc_dota_hero_mirana"] = "Mirana",

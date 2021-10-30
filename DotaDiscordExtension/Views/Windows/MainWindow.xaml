@@ -6,50 +6,67 @@
         xmlns:local="clr-namespace:DotaDiscordExtension"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:viewModels="clr-namespace:DotaDiscordExtension.UI.ViewModels"
+        xmlns:windows="clr-namespace:DotaDiscordExtension.UI.Views.Windows"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize"
-        Height="403" Width="683">
+        Height="403" Width="750">
     <hc:Window.DataContext>
         <viewModels:MainViewModel/>
     </hc:Window.DataContext>
-    <hc:Interaction.Triggers>
+    <!--<hc:Interaction.Triggers>
         <hc:EventTrigger EventName="Closing">
             <hc:EventToCommand Command="{Binding CloseCommand}" PassEventArgsToCommand="True"/>
         </hc:EventTrigger>
         <hc:EventTrigger EventName="Loaded">
             <hc:EventToCommand Command="{Binding InitCommand}" PassEventArgsToCommand="True"/>
         </hc:EventTrigger>
-    </hc:Interaction.Triggers>
+    </hc:Interaction.Triggers>-->
     <Grid>
-        <hc:NotifyIcon Text="DiscordDotaRPC"
-                       Icon="../../Resources/Img/dota2.ico">
-            <hc:Interaction.Triggers>
-                <hc:EventTrigger EventName="MouseDoubleClick">
-                    <hc:EventToCommand Command="hc:ControlCommands.PushMainWindow2Top"/>
-                </hc:EventTrigger>
-            </hc:Interaction.Triggers>
-            <hc:NotifyIcon.ContextMenu>
-                <ContextMenu>
-                    <MenuItem Command="hc:ControlCommands.PushMainWindow2Top" Header="Open"/>
-                    <MenuItem Command="hc:ControlCommands.ShutdownApp" Header="Exit"/>
-                </ContextMenu>
-            </hc:NotifyIcon.ContextMenu>
-        </hc:NotifyIcon>
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <StackPanel Grid.Row="2"
-                        Orientation="Vertical">
-                <hc:Divider Margin="5,0"/>
-                <TextBlock Text="Version 0.0.1"
-                           Margin="5"
-                           Foreground="{StaticResource GrayBrush}"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Right"/>
-            </StackPanel>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border 
+                    CornerRadius="8" 
+                    Background="#1c1c1c"
+                    Padding="10"
+                    Margin="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <hc:SideMenu Width="130" Grid.RowSpan="2">
+                        <hc:SideMenuItem Header="Активность">
+                            <hc:SideMenuItem.Icon>
+                                <Image Source="../../Resources/Img/icons8-game-controller-64.png" Width="24" Height="24"/>
+                            </hc:SideMenuItem.Icon>
+                        </hc:SideMenuItem>
+                        <hc:SideMenuItem Header="Настройки">
+                            <hc:SideMenuItem.Icon>
+                                <Image Source="../../Resources/Img/icons8-settings-64.png" Width="24" Height="24"/>
+                            </hc:SideMenuItem.Icon>
+                        </hc:SideMenuItem>
+                    </hc:SideMenu>
+
+                </Grid>
+            </Border>
+            <!--<hc:SideMenu BorderThickness="1">
+                <hc:SideMenuItem Header="Summary" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf2cb;" Style="{StaticResource TextBlockFabricIcons}"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+            </hc:SideMenu>-->
+            <Border 
+                Grid.Column="1"
+                CornerRadius="8" 
+                Background="#1c1c1c"
+                Padding="10"
+                Margin="10">
+            </Border>
         </Grid>
     </Grid>
 </hc:Window>

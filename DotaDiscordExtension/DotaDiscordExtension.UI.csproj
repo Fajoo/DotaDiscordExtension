@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <None Remove="Resources\Img\dota2.ico" />
+    <None Remove="Resources\Img\icons8-game-controller-64.png" />
+    <None Remove="Resources\Img\icons8-settings-64.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +36,12 @@
 
   <ItemGroup>
     <Resource Include="Resources\Img\dota2.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Img\icons8-game-controller-64.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Img\icons8-settings-64.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

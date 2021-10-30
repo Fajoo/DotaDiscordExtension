@@ -13,34 +13,16 @@ namespace DotaDiscordExtension.UI
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            if (CheckProcess()) Current.Shutdown();
+            //if (string.IsNullOrEmpty(UserSettings.Default.PathToDota)) new PathWindow().Show();
+            
+            //var procStartInfo = new ProcessStartInfo()
+            //{
+            //    WindowStyle = ProcessWindowStyle.Normal,
+            //    FileName = "cmd.exe",
+            //    Arguments = "sc.exe start "
+            //};
 
-            if (string.IsNullOrEmpty(UserSettings.Default.PathToDota)) new PathWindow().Show();
-            else
-            {
-                // ToDo 
-                var mainWindow = new MainWindow();
-                mainWindow.Show();
-            }
-
-            var procStartInfo = new ProcessStartInfo()
-            {
-                WindowStyle = ProcessWindowStyle.Normal,
-                FileName = "cmd.exe",
-                Arguments = "sc.exe start "
-            };
-
-            Process.Start(procStartInfo);
-        }
-
-        private bool CheckProcess()
-        {
-            var currentProcess = Process.GetCurrentProcess();
-            var runningProcess = Process.GetProcesses().FirstOrDefault(process =>
-                process.Id != currentProcess.Id &&
-                process.ProcessName.Equals(currentProcess.ProcessName, StringComparison.Ordinal));
-
-            return runningProcess is not null;
+            //Process.Start(procStartInfo);
         }
     }
 }

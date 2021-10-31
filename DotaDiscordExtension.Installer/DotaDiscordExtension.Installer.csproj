@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Authors>Fajo</Authors>
   </PropertyGroup>
 
   <ItemGroup>

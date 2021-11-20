@@ -1,5 +1,4 @@
-﻿using System;
-using DiscordRPC;
+﻿using DiscordRPC;
 using DotaDiscordExtension.Core.Interfaces;
 using DotaDiscordExtension.Core.Models;
 
@@ -9,8 +8,6 @@ namespace DotaDiscordExtension.Core
     {
         private readonly Dota2Provider _dota2Provider;
         private readonly DiscordRpcClient _discordClient;
-
-        //private long _time = 0;
 
         public DiscordProvider()
         {
@@ -31,18 +28,10 @@ namespace DotaDiscordExtension.Core
 
         private void Dota2ProviderOnStateGame(Dota2Provider provider, DotaModel model)
         {
-            //var timeNow = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-
-            //if (timeNow - _time < 3) return;
-
-            Console.WriteLine(DateTime.Now);
-
             if (model is not null)
                 _discordClient.SetPresence(PresenceConfigure.GetPresence(model));
             else
                 _discordClient.ClearPresence();
-
-            //_time = timeNow;
         }
 
         public void Stop() => Dispose();

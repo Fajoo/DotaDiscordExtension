@@ -2,7 +2,6 @@
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
-using DotaDiscordExtension.Core;
 using Newtonsoft.Json;
 
 namespace DotaDiscordExtension.ConsoleTests

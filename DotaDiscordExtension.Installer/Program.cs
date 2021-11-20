@@ -2,8 +2,6 @@
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Net.Mime;
-using System.Runtime.InteropServices.ComTypes;
 using System.ServiceProcess;
 using DotaDiscordExtension.Core;
 using DotaDiscordExtension.Core.Models;

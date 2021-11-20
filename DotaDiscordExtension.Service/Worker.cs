@@ -1,5 +1,4 @@
-    using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Hosting;
 using System;
 using System.Diagnostics;
 using System.Linq;

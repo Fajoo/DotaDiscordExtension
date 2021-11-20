@@ -18,7 +18,7 @@ namespace DotaDiscordExtension.Core
 
         public static RichPresence GetPresence(DotaModel model)
         {
-            if (model.Hero.Equals(""))
+            if (model.Hero is null)
             {
                 _presence.Details = null;
                 _assets.LargeImageKey = "draft";
@@ -30,7 +30,7 @@ namespace DotaDiscordExtension.Core
 
                 _presence.Details = $"K/D/A : {model.KDA.Item1}/{model.KDA.Item2}/{model.KDA.Item3}";
                 _assets.LargeImageKey = model.Hero;
-                _assets.LargeImageText = model.Lvl.Equals("-1") ? $"{heroName}" : $"{heroName} (Lvl: {model.Lvl})";
+                _assets.LargeImageText = model.Lvl == -1 ? $"{heroName}" : $"{heroName} (Lvl: {model.Lvl})";
             }
 
             _assets.SmallImageKey = model.Team.ToLower();

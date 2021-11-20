@@ -10,7 +10,7 @@ namespace DotaDiscordExtension.Core
         private readonly Dota2Provider _dota2Provider;
         private readonly DiscordRpcClient _discordClient;
 
-        private long _time = 0;
+        //private long _time = 0;
 
         public DiscordProvider()
         {
@@ -24,8 +24,6 @@ namespace DotaDiscordExtension.Core
             if(!_discordClient.IsInitialized)
                 _discordClient.Initialize();
 
-            //!ToDo UpdateSpeed
-
             _dota2Provider.StateGame += Dota2ProviderOnStateGame;
 
             return _dota2Provider.Start();
@@ -33,16 +31,18 @@ namespace DotaDiscordExtension.Core
 
         private void Dota2ProviderOnStateGame(Dota2Provider provider, DotaModel model)
         {
-            var timeNow = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+            //var timeNow = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 
-            if (timeNow - _time < 3) return;
+            //if (timeNow - _time < 3) return;
+
+            Console.WriteLine(DateTime.Now);
 
             if (model is not null)
                 _discordClient.SetPresence(PresenceConfigure.GetPresence(model));
             else
                 _discordClient.ClearPresence();
 
-            _time = timeNow;
+            //_time = timeNow;
         }
 
         public void Stop() => Dispose();
@@ -50,6 +50,9 @@ namespace DotaDiscordExtension.Core
         public void Dispose()
         {
             _discordClient.ClearPresence();
+
+            _dota2Provider.StateGame -= Dota2ProviderOnStateGame;
+
             _dota2Provider.Stop();
         }
     }

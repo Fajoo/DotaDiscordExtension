@@ -29,7 +29,7 @@ namespace DotaDiscordExtension.Core
                 var heroName = Dota2Names.GetHeroName(model.Hero);
 
                 _presence.Details = $"K/D/A : {model.KDA.Item1}/{model.KDA.Item2}/{model.KDA.Item3}";
-                _assets.LargeImageKey = model.Hero;
+                _assets.LargeImageKey = heroName == "Unknown hero" ? "unknown" : model.Hero;
                 _assets.LargeImageText = model.Lvl == 0 ? $"{heroName}" : $"{heroName} (Lvl: {model.Lvl})";
             }
 

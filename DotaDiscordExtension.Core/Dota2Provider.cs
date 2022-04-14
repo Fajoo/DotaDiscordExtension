@@ -42,7 +42,6 @@ namespace DotaDiscordExtension.Core
 
                 if (dotaInfo.Hero.Level == 0)
                     _model.GameState = "Picking a hero";
-
                 StateGame?.Invoke(this, _model);
             }
             catch

@@ -81,6 +81,7 @@ namespace DotaDiscordExtension.Core.Resources
             ["npc_dota_hero_oracle"] = "Oracle",
             ["npc_dota_hero_obsidian_destroyer"] = "Outworld Devourer",
             ["npc_dota_hero_pangolier"] = "Pangolier",
+            ["npc_dota_hero_primal_beast"] = "Primal Beast",
             ["npc_dota_hero_phantom_assassin"] = "Phantom Assassin",
             ["npc_dota_hero_phantom_lancer"] = "Phantom Lancer",
             ["npc_dota_hero_phoenix"] = "Phoenix",

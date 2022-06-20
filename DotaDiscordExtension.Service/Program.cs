@@ -2,6 +2,7 @@ using DotaDiscordExtension.Core;
 using DotaDiscordExtension.Core.Interfaces;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using Serilog;
 
 namespace DotaDiscordExtension.Service
 {
@@ -9,6 +10,9 @@ namespace DotaDiscordExtension.Service
     {
         public static void Main(string[] args)
         {
+            var log = new LoggerConfiguration()
+                .WriteTo.File("log-.txt", rollingInterval: RollingInterval.Day)
+                .CreateLogger();
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -18,6 +22,7 @@ namespace DotaDiscordExtension.Service
                 {
                     options.ServiceName = "DotaDiscordExtension";
                 })
+                .UseSerilog()
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddSingleton<IDiscordProvider, DiscordProvider>();

@@ -1,10 +1,14 @@
 using Microsoft.Extensions.Hosting;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using DotaDiscordExtension.Core.Interfaces;
+using DotaDiscordExtension.Core.Resources;
+using Newtonsoft.Json;
 
 namespace DotaDiscordExtension.Service
 {
@@ -16,11 +20,19 @@ namespace DotaDiscordExtension.Service
 
         public Worker(IDiscordProvider discord)
         {
+
             _discord = discord;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            var client = new HttpClient();
+            var content =
+                await client.GetStringAsync("https://raw.githubusercontent.com/Fajoo/herodata/main/herodata.json", stoppingToken);
+
+            Dota2Names.HeroNames = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
+
+
             while (!stoppingToken.IsCancellationRequested)
             {
                 switch (await CheckProcess())

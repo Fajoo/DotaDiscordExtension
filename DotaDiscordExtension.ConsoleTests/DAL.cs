@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace DotaDiscordExtension.ConsoleTests
+﻿namespace DotaDiscordExtension.ConsoleTests
 {
     public class DAL
     {
